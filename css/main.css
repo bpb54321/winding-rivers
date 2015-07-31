@@ -1,3 +1,24 @@
+h1 {
+  color: Khaki ;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  text-shadow: 4px 4px 4px black;
+}
+
+h2 {
+    color: #393c3d; 
+    font-size: 24px;
+    /*border: 2px solid black;*/
+}
+
+p {
+    margin-bottom: 13px; 
+    font-size: 15px;
+    /*border: 2px solid black;*/
+    
+}
+
 .nav a {
   color: #5a5a5a;
   font-size: 11px;
@@ -35,7 +56,9 @@
 .jumbotron p {
   font-size: 20px;
   color: #fff;
-  text-shadow: 4px 4px 4px black;
+  //color: #1b6d85;
+  //text-shadow: 4px 4px 4px black;
+  text-shadow: 0px 0px 16px black;
 }
 
 .mission-vision {
@@ -52,15 +75,4 @@
     /*border: 1px solid black;*/ 
 }
 
-.mission-vision h2 {
-    color: #393c3d; 
-    font-size: 24px;
-    /*border: 2px solid black;*/
-}
 
-.mission-vision p {
-    margin-bottom: 13px; 
-    font-size: 15px;
-    /*border: 2px solid black;*/
-    
-}
