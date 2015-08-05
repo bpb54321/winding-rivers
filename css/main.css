@@ -1,9 +1,10 @@
 h1 {
-  color: Khaki ;
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
-  text-shadow: 4px 4px 4px black;
+    color: Khaki ;
+    font-size: 48px;  
+    font-family: 'Shift', sans-serif;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+    //text-align: center;
 }
 
 h2 {
@@ -15,64 +16,61 @@ h2 {
 p {
     margin-bottom: 13px; 
     font-size: 15px;
-    /*border: 2px solid black;*/
-    
+    /*border: 2px solid black;*/  
 }
 
 .nav a {
-  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
+    color: #5a5a5a;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 14px 10px;
+    text-transform: uppercase;
 }
 
 .nav li {
-  display: inline;
+    display: inline;
 }
 
 .jumbotron {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /*border: 2px solid black;*/
-  margin-top: 0px;
-  margin-bottom: 0px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*border: 2px solid black;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-position:center center;
 }
 
 .jumbotron .container {
-  position: relative;
-  top:130px;
+    position: relative;
+    top:130px;
 }
 
 .jumbotron h1 {
-  color: Khaki ;
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
-  text-shadow: 4px 4px 4px black;
+    color: Khaki ;
+    font-size: 48px;  
+    font-family: 'Shift', sans-serif;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
 }
 
 .jumbotron p {
-  font-size: 20px;
-  color: #fff;
-  //color: #1b6d85;
-  //text-shadow: 4px 4px 4px black;
-  text-shadow: 0px 0px 16px black;
+    font-size: 20px;
+    color: #fff;
+    //color: #1b6d85;
+    //text-shadow: 4px 4px 4px black;
+    text-shadow: 0px 0px 16px black;
 }
-
-.mission-vision {
+.supporting-content {
     background-color: #efefef;
     border-bottom: 1px solid #dbdbdb;
     padding-bottom: 25px;
     /*border: 1px solid black;*/
     margin-top: 0px;
     margin-bottom: 0px;
-    
 }
 
-.mission-vision .container .row .col-md-6 {
-    /*border: 1px solid black;*/ 
-}
+
+
 
 
