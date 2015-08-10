@@ -5,7 +5,7 @@
     app.controller('DisplayBoxController', function() {
         this.annualIncome = 30000;
         this.costOfProperty = 100000;
-        this.numOfUnits = 15;
+        this.numOfUnits = 12;
         this.costSharingModel = "Split Evenly";
         this.monthlyPayment = 0;
         this.apr = 4;

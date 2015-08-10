@@ -28,16 +28,18 @@
             <!--Monthly Payment Calculator-->
             <div class="list-group-item">
                 <h3>Interactive Monthly Payment Calculator</h3>
+                <h5>Use this interactive tool to estimate what you household's
+                monthly mortgage payment will be once the community is built. </h5>
             </div>
             <!--Form-->
             <div class="list-group-item">
                 <form name="inputForm" ng-submit="display.calcMonthlyPayment()">
                     <div class="form-group">
-                        <label for="annualIncome">Annual Income</label>
+                        <label for="annualIncome">Annual Household Income</label>
                         <input type="number" class="form-control" ng-model="display.annualIncome" id="annualIncome" min="0" max="1000000000">
                     </div>
                     <div class="form-group">
-                        <label for="costOfProperty">Total Cost of Property</label>
+                        <label for="costOfProperty">Total Cost of Property Acquisition (Purchase + Rehab)</label>
                         <input type="number" class="form-control" ng-model="display.costOfProperty" id="costOfProperty" min="0" max="1000000000">
                     </div>
                     <div class="form-group">
