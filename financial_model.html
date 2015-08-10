@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="FinancialModelApp">
+<html ng-app="mainApp">
 
     <head>
         <title>Financial Model</title>
@@ -11,8 +11,12 @@
     </head>
 
     <body class="list-group" ng-controller="DisplayBoxController as display">
+        <!--Included Scripts-->
         <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/angular-apps/app.js"></script>
+        <script type="text/javascript" src="js/angular-apps/nav-app.js"></script>
+        <!--Navigation Bar-->
+        <div ng-include="'templates/header.html'"></div>
 
         <div class="list-group-item">
             <h3>{{"Annual Income: " + (display.annualIncome | currency) }}</h3>

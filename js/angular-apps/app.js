@@ -1,6 +1,6 @@
 
 (function() {
-    var app = angular.module("FinancialModelApp",[]);
+    var app = angular.module("mainApp",[]);
     
     app.controller('DisplayBoxController', function() {
         this.annualIncome = 30000;
