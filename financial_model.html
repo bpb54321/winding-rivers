@@ -19,31 +19,46 @@
         <div ng-include="'templates/header.html'"></div>
         <!--Form-->
         <div class="list-group-item">
-            <form>
+            <form name="inputForm" ng-submit="display.calcMonthlyPayment()">
                 <div class="form-group">
                     <label for="annualIncome">Annual Income</label>
-                    <input type="number" class="form-control" id="annualIncome" placeholder="Ex: 30000" min="0" max="1000000000">
+                    <input type="number" class="form-control" ng-model="display.annualIncome" id="annualIncome" min="0" max="1000000000">
                 </div>
                 <div class="form-group">
-                    <label for="costOfProperty">Cost of Property</label>
-                    <input type="number" class="form-control" id="costOfProperty" placeholder="Ex: 400000" min="0" max="1000000000">
+                    <label for="costOfProperty">Total Cost of Property</label>
+                    <input type="number" class="form-control" ng-model="display.costOfProperty" id="costOfProperty" min="0" max="1000000000">
+                </div>
+                <div class="form-group">
+                    <label for="apr">Annual Percentage Rate for Mortgage</label>
+                    <br>
+                    <select name="apr" class="form-control" ng-model="display.apr" ng-options="value for value in [1,2,3,4,5]">
+                        <option value=""></option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="numberOfUnits">Number Of Units: {{display.numOfUnits}}</label>
-                    <input type="range" ng-model="display.numOfUnits" id="numberOfUnits" min="12" max="20" step="1">
+                    <input type="range" class="form-control" ng-model="display.numOfUnits" id="numberOfUnits" min="12" max="20" step="1">
                 </div>
                 <div class="form-group">
-                    <div>
-                        <label>Cost Sharing Model</label>
-                    </div>
-                    <input type="button" class="btn btn-primary" value="Sliding Scale">
-                    <input type="button" class="btn btn-primary" value="Split Evenly">
+                    <label>Cost Sharing Model</label>
+                    <br>
+                    <input type="radio" name="costSharingModel" value="Split Evenly" ng-model="display.costSharingModel"> Split Evenly
+                    <br>
+                    <input type="radio" name="costSharingModel" value="Sliding Scale" ng-model="display.costSharingModel"> Sliding Scale
+                    <br><br>
                 </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control" value="Submit"> 
+                </div>
+
+
             </form>  
         </div>
-
+        <!--Result Section-->
         <div class="list-group-item">
-          
+            <blockquote>
+                Monthly Payment: {{display.monthlyPayment| currency}}
+            </blockquote>
         </div>
 
 
