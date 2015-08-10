@@ -10,55 +10,68 @@
 
     </head>
 
-    <body class="list-group" ng-controller="DisplayBoxController as display">
+    <body ng-controller="DisplayBoxController as display">
         <!--Included Scripts-->
         <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/angular-apps/app.js"></script>
         <script type="text/javascript" src="js/angular-apps/nav-app.js"></script>
         <!--Navigation Bar-->
         <div ng-include="'templates/header.html'"></div>
-        <!--Form-->
-        <div class="list-group-item">
-            <form name="inputForm" ng-submit="display.calcMonthlyPayment()">
-                <div class="form-group">
-                    <label for="annualIncome">Annual Income</label>
-                    <input type="number" class="form-control" ng-model="display.annualIncome" id="annualIncome" min="0" max="1000000000">
-                </div>
-                <div class="form-group">
-                    <label for="costOfProperty">Total Cost of Property</label>
-                    <input type="number" class="form-control" ng-model="display.costOfProperty" id="costOfProperty" min="0" max="1000000000">
-                </div>
-                <div class="form-group">
-                    <label for="apr">Annual Percentage Rate for Mortgage</label>
-                    <br>
-                    <select name="apr" class="form-control" ng-model="display.apr" ng-options="value for value in [1,2,3,4,5]">
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="numberOfUnits">Number Of Units: {{display.numOfUnits}}</label>
-                    <input type="range" class="form-control" ng-model="display.numOfUnits" id="numberOfUnits" min="12" max="20" step="1">
-                </div>
-                <div class="form-group">
-                    <label>Cost Sharing Model</label>
-                    <br>
-                    <input type="radio" name="costSharingModel" value="Split Evenly" ng-model="display.costSharingModel"> Split Evenly
-                    <br>
-                    <input type="radio" name="costSharingModel" value="Sliding Scale" ng-model="display.costSharingModel"> Sliding Scale
-                    <br><br>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="form-control" value="Submit"> 
-                </div>
-
-
-            </form>  
+        <!--Jumbotron-->
+        <div class="jumbotron" style="background-image: url(img/financial_model.jpg)">
+            <div class="container" >
+                <h1>Financial Model</h1>
+                <p>How our community will share costs</p>
+            </div>
         </div>
-        <!--Result Section-->
-        <div class="list-group-item">
-            <blockquote>
-                Monthly Payment: {{display.monthlyPayment| currency}}
-            </blockquote>
+        <div class="list-group">
+            <!--Monthly Payment Calculator-->
+            <div class="list-group-item">
+                <h3>Interactive Monthly Payment Calculator</h3>
+            </div>
+            <!--Form-->
+            <div class="list-group-item">
+                <form name="inputForm" ng-submit="display.calcMonthlyPayment()">
+                    <div class="form-group">
+                        <label for="annualIncome">Annual Income</label>
+                        <input type="number" class="form-control" ng-model="display.annualIncome" id="annualIncome" min="0" max="1000000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="costOfProperty">Total Cost of Property</label>
+                        <input type="number" class="form-control" ng-model="display.costOfProperty" id="costOfProperty" min="0" max="1000000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="apr">Annual Percentage Rate for Mortgage</label>
+                        <br>
+                        <select name="apr" class="form-control" ng-model="display.apr" ng-options="value for value in [1,2,3,4,5]">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfUnits">Number Of Units: {{display.numOfUnits}}</label>
+                        <input type="range" class="form-control" ng-model="display.numOfUnits" id="numberOfUnits" min="12" max="20" step="1">
+                    </div>
+                    <div class="form-group">
+                        <label>Cost Sharing Model</label>
+                        <br>
+                        <input type="radio" name="costSharingModel" value="Split Evenly" ng-model="display.costSharingModel"> Split Evenly
+                        <br>
+                        <input type="radio" name="costSharingModel" value="Sliding Scale" ng-model="display.costSharingModel"> Sliding Scale
+                        <br><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-control" value="Submit"> 
+                    </div>
+
+
+                </form>  
+            </div>
+            <!--Result Section-->
+            <div class="list-group-item">
+                <blockquote>
+                    Monthly Payment: {{display.monthlyPayment| currency}}
+                </blockquote>
+            </div>
         </div>
 
 
