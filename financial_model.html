@@ -29,7 +29,7 @@
             <div class="list-group-item">
                 <h3>Interactive Monthly Payment Calculator</h3>
                 <h5>Use this interactive tool to estimate what you household's
-                monthly mortgage payment will be once the community is built. </h5>
+                    monthly mortgage payment will be once the community is built. </h5>
             </div>
             <!--Form-->
             <div class="list-group-item">
@@ -70,6 +70,25 @@
             </div>
             <!--Result Section-->
             <div class="list-group-item">
+                <table class="table">
+                    <caption>Income Distribution Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Annual Income Distribution Groups</th>
+                            <th>Representative Annual Income for Each Group</th>
+                            <th>Distribution Percentage</th>
+                            <th>Num of Households with Income Given {{display.numOfUnits}} Households</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="value in display.incomeData.representativeIncomes">
+                            <td>{{display.incomeData.incomeGroups[$index]}}</td>
+                            <td>{{display.incomeData.representativeIncomes[$index] | currency}}</td>
+                            <td>{{display.incomeData.distributionPct[$index]}}</td>
+                            <td>{{display.incomeData.peoplePerIncome[$index]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <blockquote>
                     Monthly Payment: {{display.monthlyPayment| currency}}
                 </blockquote>
