@@ -25,6 +25,28 @@
             </div>
         </div>
         <div class="list-group">
+            <!--STL Income Distribution Table-->
+                        <div class="list-group-item">
+                <table class="table">
+                    <caption>Income Distribution Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Annual Income Distribution Groups</th>
+                            <th>Representative Annual Income for Each Group</th>
+                            <th>Distribution Percentage</th>
+                            <th>Num of Households with Income Given 12 Households</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="value in display.representativeIncomes">
+                            <td>{{display.incomeGroups[$index]}}</td>
+                            <td>{{display.representativeIncomes[$index] | currency}}</td>
+                            <td>{{display.distributionPct[$index]}}</td>
+                            <td>{{display.peoplePerIncomeStatic[$index] | number:2 }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <!--Monthly Payment Calculator-->
             <div class="list-group-item">
                 <h3>Interactive Monthly Payment Calculator</h3>
@@ -61,27 +83,7 @@
                 </form>  
             </div>
             <!--Result Section-->
-            <div class="list-group-item">
-                <table class="table" ng-show="false">
-                    <caption>Income Distribution Table</caption>
-                    <thead>
-                        <tr>
-                            <th>Annual Income Distribution Groups</th>
-                            <th>Representative Annual Income for Each Group</th>
-                            <th>Distribution Percentage</th>
-                            <th>Num of Households with Income Given {{display.numOfUnits}} Households</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="value in display.representativeIncomes">
-                            <td>{{display.incomeGroups[$index]}}</td>
-                            <td>{{display.representativeIncomes[$index] | currency}}</td>
-                            <td>{{display.distributionPct[$index]}}</td>
-                            <td>{{display.peoplePerIncome[$index] | number:2 }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
             <div class="list-group-item">
                 <table class="table">
                     <caption>Monthly Household Mortgage Payments According to 
@@ -105,46 +107,5 @@
                 </table>
             </div>
         </div>
-
-
-
-
-
-        <!--    <div class="nav">
-              <div class="container">
-                <ul  class="pull-left">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="properties_2.html">Properties</a></li>
-                  <li><a href="financial_model.html">Financial Model</a></li>
-                  <li><a href="membership.html">Membership</a></li>
-                  <li><a href="application.html">Application</a></li>
-                </ul>
-              </div>
-            </div>
-        
-              <div class="jumbotron" ng-controller="MainController">
-              <div class="container">
-                  <h1>{{ 5 + 2 }}</h1>
-              </div>
-            </div> 
-            
-            <div class="supporting-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3>Content coming soon!</h3>
-                        </div>
-                        <div class="col-md-6">
-           
-                        </div>
-                     </div>   
-                </div>
-            
-            
-            </div>-->
-
-
-
-
     </body>
 </html>
