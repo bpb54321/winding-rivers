@@ -54,14 +54,6 @@
                         <input type="range" class="form-control" ng-model="display.numOfUnits" id="numberOfUnits" min="12" max="20" step="1">
                     </div>
                     <div class="form-group">
-                        <label>Cost Sharing Model</label>
-                        <br>
-                        <input type="radio" name="costSharingModel" value="Split Evenly" ng-model="display.costSharingModel"> Split Evenly
-                        <br>
-                        <input type="radio" name="costSharingModel" value="Sliding Scale" ng-model="display.costSharingModel"> Sliding Scale
-                        <br><br>
-                    </div>
-                    <div class="form-group">
                         <input type="submit" class="form-control" value="Submit"> 
                     </div>
 
@@ -89,18 +81,28 @@
                         </tr>
                     </tbody>
                 </table>
-                <blockquote>
-                    Total Group Annual Income: {{display.totalGroupAnnualIncome | currency}} 
-                    <br>
-                    Group Monthly Mortgage Payment: {{display.groupMonthlyMortgagePayment | currency}} 
-                    <br>
-                    Group Annual Mortgage Payment: {{display.groupAnnualMortgagePayment | currency}}
-                    <br>
-                    Percentage of Income Each Household Contributes Towards Mortgage:
-                        {{display.pctIncomeTowardsMortgage}}
-                    <br>
-                    Monthly Payment: {{display.monthlyPayment| currency}}
-                </blockquote>
+            </div>
+            <div class="list-group-item">
+                <table class="table">
+                    <caption>Monthly Household Mortgage Payments According to 
+                        Cost Sharing Model</caption>
+                    <thead>
+                        <tr>
+                            <th>Cost Sharing Model</th>
+                            <th>Group Monthly Mortgage Payment</th>
+                            <th>Your Household Monthly Payment</th>
+                            <th>Pct of Your Monthly Income</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="value in display.resultsObject.costSharingModels">
+                            <td>{{display.resultsObject.costSharingModels[$index]}}</td>
+                            <td>{{display.groupMonthlyMortgagePayment | currency}}</td>
+                            <td>{{display.resultsObject.householdMonthlyPayment[$index] | currency}}</td>
+                            <td>{{display.resultsObject.pctMonthlyIncome[$index] | number:2 }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
