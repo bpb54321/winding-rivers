@@ -28,7 +28,7 @@
             <!--Monthly Payment Calculator-->
             <div class="list-group-item">
                 <h3>Interactive Monthly Payment Calculator</h3>
-                <h5>Use this interactive tool to estimate what you household's
+                <h5>Use this interactive tool to estimate what your household's
                     monthly mortgage payment will be once the community is built. </h5>
             </div>
             <!--Form-->
@@ -70,7 +70,7 @@
             </div>
             <!--Result Section-->
             <div class="list-group-item">
-                <table class="table">
+                <table class="table" ng-show="false">
                     <caption>Income Distribution Table</caption>
                     <thead>
                         <tr>
@@ -81,15 +81,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="value in display.incomeData.representativeIncomes">
-                            <td>{{display.incomeData.incomeGroups[$index]}}</td>
-                            <td>{{display.incomeData.representativeIncomes[$index] | currency}}</td>
-                            <td>{{display.incomeData.distributionPct[$index]}}</td>
-                            <td>{{display.incomeData.peoplePerIncome[$index]}}</td>
+                        <tr ng-repeat="value in display.representativeIncomes">
+                            <td>{{display.incomeGroups[$index]}}</td>
+                            <td>{{display.representativeIncomes[$index] | currency}}</td>
+                            <td>{{display.distributionPct[$index]}}</td>
+                            <td>{{display.peoplePerIncome[$index] | number:2 }}</td>
                         </tr>
                     </tbody>
                 </table>
                 <blockquote>
+                    Total Group Annual Income: {{display.totalGroupAnnualIncome | currency}} 
+                    <br>
+                    Group Monthly Mortgage Payment: {{display.groupMonthlyMortgagePayment | currency}} 
+                    <br>
+                    Group Annual Mortgage Payment: {{display.groupAnnualMortgagePayment | currency}}
+                    <br>
+                    Percentage of Income Each Household Contributes Towards Mortgage:
+                        {{display.pctIncomeTowardsMortgage}}
+                    <br>
                     Monthly Payment: {{display.monthlyPayment| currency}}
                 </blockquote>
             </div>
