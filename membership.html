@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="mainApp">
+<html ng-app="member-app">
 
     <head>
 
@@ -10,10 +10,15 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/jquery-ui-1.8.1.custom.css" type="text/css">
 
+        <!--JQuery Scripts-->
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
         <script type="text/javascript" src="js/jquery.ui.core.js"></script>
         <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
         <script type="text/javascript" src="js/jquery.ui.accordion.js"></script>
+        
+        <!--Angular.js Scripts-->
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-apps/member-app.js"></script>
 
 
 
@@ -40,11 +45,8 @@
 
     </head>
 
-    <body>
-        <!--Included Scripts-->
-        <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/angular-apps/app.js"></script>
-        <script type="text/javascript" src="js/angular-apps/nav-app.js"></script>
+    <body ng-controller="MemberAccordionController as memCtrl" >
+
         <!--Navigation Bar-->
         <div ng-include="'templates/header.html'"></div>
 
@@ -58,13 +60,12 @@
             <div class="list-group-item">
                 <h3>Current Members</h3>
             </div>
-            <!--<h2 class='list-group-item' style="margin: 0px">Current Members</h2>-->
             <div id="infolist">
-                <h3><a href="#">Elizabeth (Za) Goodbrake</a></h3>
+                <h3><a href="#">{{memCtrl.members[0].name}}</a></h3>
                 <div class="person">
-                    <img src="img/Membership/za_goodbrake.jpg" alt="Za Goodbrake">
+                    <img src={{memCtrl.members[0].imageUrl}} alt={{memCtrl.members[0].name}}>
                     <ul>
-                        <li><b>Bio: </b>Hi! I'm Elizabeth (Za) Goodbrake. I'm an internationalist, violinist and yoga enthusiast. I have a 1 year old daughter Lorraine and am expecting another baby in May, Before kids, I traveled over two years throughout 28 countries studying language, culture and yoga. I'm a high school teacher at University City. I love cooking with whole foods and taking long walks almost every day. I've wanted to return to living in community ever since my husband and I lived at PunPun, an ecovillage and seed saving operation, in Thailand.</li>
+                        <li><b>Bio: </b>{{memCtrl.members[0].bio}}</li>
                     </ul>
                     <br clear="all">
                 </div>
