@@ -1,10 +1,22 @@
 
-var main = function () {
-    $('.nav-menu-button').click(function() {
-        var test= 2+2;
-    });
-};
-$(document).ready(main);
+$(document).ready(function() {
+    
+    $('h1').click(
+        function() {
+            alert("This is an alert");
+        }               
+    );
+    $('p').click(
+        function() {
+            alert("This is an alert");
+        }               
+    );
+    $('button').click(
+        function() {
+            alert("This is an alert");
+        }               
+    );
+});
 
 
 

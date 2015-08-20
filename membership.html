@@ -48,7 +48,17 @@
     <body ng-controller="MemberAccordionController as memCtrl" >
 
         <!--Navigation Bar-->
-        <div ng-include="'templates/header.html'"></div>
+        <div class="nav navbar-fixed-top" >
+            <div class="container">
+                <ul  class="pull-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties_2.html">Properties</a></li>
+                    <li><a href="financial_model.html">Financial Model</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>  
+            </div>
+            <button>Test</button>
+        </div>
         <div class="jumbotron" style="background-image: url(img/membership_jumbotron.jpg); background-position: 0% 10%">
             <!--<div class="container" >-->
             <div class="container" style="position: relative; top: 50%" >

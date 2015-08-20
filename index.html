@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="mainApp">
+<html>
 
     <head>
         <title>Winding Rivers Cooperative Community</title> 
@@ -8,15 +8,26 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <!--Vendor Scripts-->
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+        <!--My jQuery Scripts-->
+        <script type="text/javascript" src="js/nav-menu.js"></script>
+
     </head>
 
     <body>
-        <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/angular-apps/app.js"></script>
-        <script type="text/javascript" src="js/angular-apps/nav-app.js"></script>
-        <!--Navigation Bar-->
-        <div ng-include="'templates/header.html'"></div>
-
+        <div class="nav navbar-fixed-top" >
+            <div class="container">
+                <ul  class="pull-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties_2.html">Properties</a></li>
+                    <li><a href="financial_model.html">Financial Model</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>  
+            </div>
+            <button>Test</button>
+        </div>
         <div class="jumbotron" style="background-image: url(img/index_jumbotron.jpg)">
             <div class="container" >
                 <h1>Winding Rivers Cooperative Community</h1>
