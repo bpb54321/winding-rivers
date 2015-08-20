@@ -1,20 +1,14 @@
 
-$(document).ready(function() {
-    
-    $('h1').click(
-        function() {
-            alert("This is an alert");
-        }               
-    );
-    $('p').click(
-        function() {
-            alert("This is an alert");
-        }               
-    );
+$(document).ready(function () {
+
     $('button').click(
-        function() {
-            alert("This is an alert");
-        }               
+            function () {
+                $('.nav').animate({
+                    top: "0px"
+                }, 500, function () {
+                    // Animation complete, do something.
+                });
+            }
     );
 });
 

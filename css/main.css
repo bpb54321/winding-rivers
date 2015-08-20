@@ -3,7 +3,7 @@
 .nav.navbar-fixed-top {
     background-color: white; 
     border-bottom: 1px solid #dbdbdb;
-    top: 0px;
+    top: -25px;
 }
 .nav a {
     color: #5a5a5a;
