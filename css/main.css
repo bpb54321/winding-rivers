@@ -1,27 +1,25 @@
 
-
 .nav.navbar-fixed-top {
     background-color: white; 
     border-bottom: 1px solid #dbdbdb;
     top: -25px;
+    //top: 0px;
+    font-size: 14px;
 }
 .nav a {
     color: #5a5a5a;
-    font-size: 11px;
+    //font-size: 11px;
     font-weight: bold;
     padding: 14px 10px;
     text-transform: uppercase;
 }
-
 .nav li {
     display: inline;
 }
-
-
-
-
-
-
+.nav ul {
+    padding: 0px;
+}
+//.nav .container
 h1 {
     color: Khaki ;
     font-size: 48px;  
@@ -30,20 +28,16 @@ h1 {
     text-shadow: 4px 4px 4px black;
     //text-align: center;
 }
-
 h2 {
     color: #393c3d; 
     font-size: 24px;
     /*border: 2px solid black;*/
 }
-
 p {
     margin-bottom: 13px; 
     font-size: 15px;
     /*border: 2px solid black;*/  
 }
-
-
 .jumbotron {
     height: 500px;
     background-repeat: no-repeat;
@@ -53,12 +47,10 @@ p {
     margin-bottom: 0px;
     background-position:center center;
 }
-
 .jumbotron .container {
     position: relative;
     top:130px;
 }
-
 .jumbotron h1 {
     color: Khaki ;
     font-size: 48px;  
@@ -66,7 +58,6 @@ p {
     font-weight: bold;
     text-shadow: 4px 4px 4px black;
 }
-
 .jumbotron p {
     font-size: 20px;
     color: #fff;
