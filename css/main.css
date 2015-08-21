@@ -1,37 +1,48 @@
+
+.nav.navbar-fixed-top {
+    background-color: white; 
+    border-bottom: 1px solid #dbdbdb;
+    top: -40px;
+    //top: 0px;
+    height: 40px;
+    font-size: 14px;
+}
+.nav a {
+    color: #5a5a5a;
+    //font-size: 11px;
+    font-weight: bold;
+    padding: 14px 10px;
+    text-transform: uppercase;
+}
+.nav li {
+    display: inline;
+}
+.nav ul {
+    padding: 0px;
+}
+.nav li.fa-angle-up {
+    font-size: 2em; 
+    cursor:pointer;
+}
 h1 {
     color: Khaki ;
     font-size: 48px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
     text-shadow: 4px 4px 4px black;
-    //text-align: center;
 }
-
 h2 {
     color: #393c3d; 
     font-size: 24px;
     /*border: 2px solid black;*/
 }
-
 p {
     margin-bottom: 13px; 
     font-size: 15px;
     /*border: 2px solid black;*/  
 }
-
-.nav a {
-    color: #5a5a5a;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 14px 10px;
-    text-transform: uppercase;
-}
-
-.nav li {
-    display: inline;
-}
-
 .jumbotron {
+    padding: 0px;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,12 +51,28 @@ p {
     margin-bottom: 0px;
     background-position:center center;
 }
-
+.jumbotron .icon-menu {
+    font-size: 2em;
+    text-transform: uppercase;
+    height: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.jumbotron .icon-menu a {
+    text-decoration: none;
+}
+.jumbotron .icon-menu a:link, .jumbotron .icon-menu a:visited { 
+    color: #fff;
+}
+.jumbotron .icon-menu a:hover, .jumbotron .icon-menu a:active { 
+    color: khaki;
+}
 .jumbotron .container {
     position: relative;
     top:130px;
 }
-
 .jumbotron h1 {
     color: Khaki ;
     font-size: 48px;  
@@ -53,7 +80,6 @@ p {
     font-weight: bold;
     text-shadow: 4px 4px 4px black;
 }
-
 .jumbotron p {
     font-size: 20px;
     color: #fff;
