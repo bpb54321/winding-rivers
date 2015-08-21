@@ -1,20 +1,21 @@
 
 $(document).ready(function () {
 
-    $('button').click(
+    $('.icon-menu').click(
             function () {
                 $('.nav').animate({
                     top: "0px"
-                }, 200, function () {
+                }, 500, function () {
                     // Animation complete, do something.
                 });
             }
     );
+    //$('body').animate({top: '285px'}, 200);
     $('.fa-angle-up').click(
             function () {
                 $('.nav').animate({
-                    top: "-25px"
-                }, 200, function () {
+                    top: "-100%"
+                }, 500, function () {
                     // Animation complete, do something.
                 });
             }

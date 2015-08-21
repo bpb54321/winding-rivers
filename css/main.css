@@ -2,8 +2,9 @@
 .nav.navbar-fixed-top {
     background-color: white; 
     border-bottom: 1px solid #dbdbdb;
-    top: -25px;
+    top: -40px;
     //top: 0px;
+    height: 40px;
     font-size: 14px;
 }
 .nav a {
@@ -19,14 +20,16 @@
 .nav ul {
     padding: 0px;
 }
-//.nav .container
+.nav li.fa-angle-up {
+    font-size: 2em; 
+    cursor:pointer;
+}
 h1 {
     color: Khaki ;
     font-size: 48px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
     text-shadow: 4px 4px 4px black;
-    //text-align: center;
 }
 h2 {
     color: #393c3d; 
@@ -39,6 +42,7 @@ p {
     /*border: 2px solid black;*/  
 }
 .jumbotron {
+    padding: 0px;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,6 +50,24 @@ p {
     margin-top: 0px;
     margin-bottom: 0px;
     background-position:center center;
+}
+.jumbotron .icon-menu {
+    font-size: 2em;
+    text-transform: uppercase;
+    height: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.jumbotron .icon-menu a {
+    text-decoration: none;
+}
+.jumbotron .icon-menu a:link, .jumbotron .icon-menu a:visited { 
+    color: #fff;
+}
+.jumbotron .icon-menu a:hover, .jumbotron .icon-menu a:active { 
+    color: khaki;
 }
 .jumbotron .container {
     position: relative;

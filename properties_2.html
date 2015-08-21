@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="mainApp">
+<html>
 
     <head>
         <title>Properties</title>
 
-        <!--Javascript-->
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/jquery.cycle2.js"></script>
-
+        <!--Universal Header-->
         <!--CSS-->
-        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!--Vendor Javascript-->
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.cycle2.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+
+        <!--Custom Javascript-->
+        <script type="text/javascript" src="js/nav-menu.js"></script>
+        <script type="text/javascript" src="js/angular-apps/app.js"></script>
+
 
         <!--Internal Style Sheet-->
         <style>
             .cycle-slideshow {
-/*              border-style: solid;
-                border-width: 1px;*/
+                /*              border-style: solid;
+                                border-width: 1px;*/
                 width: 100%;
                 height: 400px
             }
@@ -30,27 +38,26 @@
                 height: 400px;
             }
         </style>
+
     </head>
 
     <body>
-        <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/angular-apps/app.js"></script>
-        <script type="text/javascript" src="js/angular-apps/nav-app.js"></script>
-        <!--Navigation Bar-->
+
         <div class="nav navbar-fixed-top" >
-            <div class="container">
-                <ul  class="pull-left">
+            <div class="container-fluid">
+                <ul>
+                    <li class="fa fa-angle-up"></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="properties_2.html">Properties</a></li>
                     <li><a href="financial_model.html">Financial Model</a></li>
                     <li><a href="membership.html">Membership</a></li>
                 </ul>  
             </div>
-            <button>Test</button>
         </div>
-
-        <!--<div class="jumbotron" style="background-image: url(img/Lyon_School_Photos/lyon_school_front.png)">-->
         <div class="jumbotron" style="background-image: url(img/properties_jumbotron.jpg); background-position: top">    
+            <div class="icon-menu">
+                <a href="#"><i class="fa fa-bars"></i>Menu</a>
+            </div>
             <div class="container">
                 <h1>Potential Properties</h1>
                 <p>Possible locations for our community</p>

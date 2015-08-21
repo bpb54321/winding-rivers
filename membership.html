@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="member-app">
+<html >
 
     <head>
 
         <title>Membership</title>
 
-        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+        <!--Header Not Universal Due to Older Version of jQuery for Accordion-->
+        <!--CSS-->
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/jquery-ui-1.8.1.custom.css" type="text/css">
-
-        <!--JQuery Scripts-->
+        
+        <!--Vendor Javascript-->
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="js/jquery.cycle2.js"></script>
         <script type="text/javascript" src="js/jquery.ui.core.js"></script>
         <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
         <script type="text/javascript" src="js/jquery.ui.accordion.js"></script>
-        
-        <!--Angular.js Scripts-->
         <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/angular-apps/member-app.js"></script>
 
-
-
+        <!--Custom Javascript-->
+        <script type="text/javascript" src="js/nav-menu.js"></script>
+        <script type="text/javascript" src="js/angular-apps/app.js"></script>
+        
+        
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#infolist").accordion({
@@ -45,22 +49,24 @@
 
     </head>
 
-    <body ng-controller="MemberAccordionController as memCtrl" >
+    <body >
 
         <!--Navigation Bar-->
         <div class="nav navbar-fixed-top" >
-            <div class="container">
-                <ul  class="pull-left">
+            <div class="container-fluid">
+                <ul>
+                    <li class="fa fa-angle-up"></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="properties_2.html">Properties</a></li>
                     <li><a href="financial_model.html">Financial Model</a></li>
                     <li><a href="membership.html">Membership</a></li>
                 </ul>  
             </div>
-            <button>Test</button>
         </div>
         <div class="jumbotron" style="background-image: url(img/membership_jumbotron.jpg); background-position: 0% 10%">
-            <!--<div class="container" >-->
+            <div class="icon-menu">
+                <a href="#"><i class="fa fa-bars"></i>Menu</a>
+            </div>
             <div class="container" style="position: relative; top: 50%" >
                 <h1> Membership</h1>
                 <p>Members form our community.</p>
