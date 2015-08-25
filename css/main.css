@@ -1,11 +1,18 @@
 
-.nav.navbar-fixed-top {
-    background-color: white; 
+.navbar-fixed-top {
+    //background-color: white; 
     border-bottom: 1px solid #dbdbdb;
-    top: -40px;
+    //top: -40px;
     //top: 0px;
     height: 40px;
     font-size: 14px;
+    //padding-top: 10px;
+}
+#menu-navbar-collapse {
+    background-color: white;
+}
+.navbar-header {
+    background-color: white;
 }
 .nav a {
     color: #5a5a5a;
@@ -14,16 +21,7 @@
     padding: 14px 10px;
     text-transform: uppercase;
 }
-.nav li {
-    display: inline;
-}
-.nav ul {
-    padding: 0px;
-}
-.nav li.fa-angle-up {
-    font-size: 2em; 
-    cursor:pointer;
-}
+
 h1 {
     color: Khaki ;
     font-size: 48px;  

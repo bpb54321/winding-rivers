@@ -3,7 +3,7 @@
 
     <head>
         <title>Winding Rivers Cooperative Community</title> 
-        
+
         <!--Universal Header-->
         <!--CSS-->
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/jquery-ui-1.8.1.custom.css" type="text/css">
-        
+
         <!--Vendor Javascript-->
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/jquery.cycle2.js"></script>
@@ -19,29 +19,37 @@
         <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
         <script type="text/javascript" src="js/jquery.ui.accordion.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
         <!--Custom Javascript-->
-        <script type="text/javascript" src="js/nav-menu.js"></script>
         <script type="text/javascript" src="js/angular-apps/app.js"></script>
 
     </head>
 
     <body>
-        <div class="nav navbar-fixed-top" >
-            <div class="container-fluid">
-                <ul>
-                    <li class="fa fa-angle-up"></li>
+        <nav class="navbar navbar-default" role="navigation" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                        data-target="#menu-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WINDING RIVERS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu-navbar-collapse">
+            <!--<div>-->
+                <ul class="nav navbar-nav" style="background-color: white">
+                    <!--<li class="fa fa-angle-up"></li>-->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="properties_2.html">Properties</a></li>
                     <li><a href="financial_model.html">Financial Model</a></li>
                     <li><a href="membership.html">Membership</a></li>
                 </ul>  
             </div>
-        </div>
+        </nav>
         <div class="jumbotron" style="background-image: url(img/index_jumbotron.jpg)">
-            <div class="icon-menu">
-                <a href="#"><i class="fa fa-bars"></i>Menu</a>
-            </div>
             <div class="container" >
                 <h1>Winding Rivers Cooperative Community</h1>
                 <p>Ecological community living in St. Louis, MO.</p>
