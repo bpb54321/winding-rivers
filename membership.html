@@ -5,138 +5,114 @@
 
         <title>Membership</title>
 
-        <!--Header Not Universal Due to Older Version of jQuery for Accordion-->
         <!--CSS-->
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/jquery-ui-1.8.1.custom.css" type="text/css">
-        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
         <style type="text/css">
-            ul {list-style-type: none}
-            img {
+            .person img {
                 padding-right: 20px; 
                 float:left;
                 width: 150px;
                 height: 150px;
             }
-            #infolist {width:auto}
-
         </style>
 
     </head>
 
     <body >
 
-        <nav class="navbar navbar-default" role="navigation" >
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" 
-                        data-target="#menu-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">WINDING RIVERS</a>
-            </div>
-            <div class="collapse navbar-collapse" id="menu-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="properties_2.html">Properties</a></li>
-                    <li><a href="financial_model.html">Financial Model</a></li>
-                    <li class="d-list-item">
-                        <a href="#" class="d-link">Membership<b class="caret"></b></a>
-                        <ul class="d-menu">
-                            <li><a href="#">How to Become a Member</a></li>
-                            <li><a href="membership.html">Current Members</a></li>
+                <nav class="navbar navbar-default" role="navigation" >
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                                data-target="#menu-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">WINDING RIVERS</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="menu-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="properties_2.html">Properties</a></li>
+                            <li><a href="financial_model.html">Financial Model</a></li>
+                            <li class="d-list-item">
+                                <a href="#" class="d-link">Membership<b class="caret"></b></a>
+                                <ul class="d-menu">
+                                    <li><a href="#">How to Become a Member</a></li>
+                                    <li><a href="membership.html">Current Members</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>  
-            </div>
-        </nav>
+                        <form class="navbar-form navbar-right" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="PEXH3B2NKBGX6">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </nav> 
         <div class="jumbotron" style="background-image: url(img/membership_jumbotron.jpg); background-position: 0% 10%">
             <div class="container" style="position: relative; top: 50%" >
                 <h1> Membership</h1>
                 <p>Members form our community.</p>
             </div>
-        </div> 
+        </div>
         <div class="supporting-content list-group">
             <div class="list-group-item">
                 <h3>Current Members</h3>
             </div>
-            <div id="infolist">
-                <h3><a href="#">Elizabeth (Za) Goodbrake</a></h3>
+            <div id="accordion" class="list-group-item">
+                <h3>Elizabeth (Za) Goodbrake</h3>
                 <div class="person">
                     <img src="img/Membership/za_goodbrake.jpg" alt="Elizabeth (Za) Goodbrake">
-                    <ul>
-                        <li><b>Bio: </b>Hi! I'm Elizabeth (Za) Goodbrake. I'm an internationalist, violinist and yoga enthusiast. I have a 1 year old daughter Lorraine and am expecting another baby in May, Before kids, I traveled over two years throughout 28 countries studying language, culture and yoga. I'm a high school teacher at University City. I love cooking with whole foods and taking long walks almost every day. I've wanted to return to living in community ever since my husband and I lived at PunPun, an ecovillage and seed saving operation, in Thailand.</li>
-                    </ul>
-                    <br clear="all">
+                    <p><b>Bio: </b>Hi! I'm Elizabeth (Za) Goodbrake. I'm an internationalist, violinist and yoga enthusiast. I have a 1 year old daughter Lorraine and am expecting another baby in May, Before kids, I traveled over two years throughout 28 countries studying language, culture and yoga. I'm a high school teacher at University City. I love cooking with whole foods and taking long walks almost every day. I've wanted to return to living in community ever since my husband and I lived at PunPun, an ecovillage and seed saving operation, in Thailand.</p>
                 </div>
-                <h3><a href="#">Aaron Michels</a></h3>
+                <h3>Aaron Michels</h3>
                 <div class="person">
                     <img src="img/Membership/aaron_michels.jpg" alt="Aaron Michels">
-                    <ul>
-                        <li><b>Bio: </b>Aaron Michels is a father of two, and since small has been involved in work around environmental sustainability. He currently works for an energy efficiency consulting company, but has also worked with agricultural training programs (in the US and Latin America), in waste reduction, and in a host of small DIY level projects like greywater systems for cohousing and vegoil-diesel substitution. Since returning to St. Louis, he has re-engaged with the primary division this city faces, the Delmar Divide. So besides organizing around intentional community he participates in racial and economic justice efforts. He enjoys making light sculptures, beatboxing, building stuff, tackle/tickle with Maddox, and sitting next to streams.</li>
-                    </ul>
-                    <br clear="all">
+                    <p><b>Bio: </b>Aaron Michels is a father of two, and since small has been involved in work around environmental sustainability. He currently works for an energy efficiency consulting company, but has also worked with agricultural training programs (in the US and Latin America), in waste reduction, and in a host of small DIY level projects like greywater systems for cohousing and vegoil-diesel substitution. Since returning to St. Louis, he has re-engaged with the primary division this city faces, the Delmar Divide. So besides organizing around intentional community he participates in racial and economic justice efforts. He enjoys making light sculptures, beatboxing, building stuff, tackle/tickle with Maddox, and sitting next to streams.</p>
                 </div>
-                <h3><a href="#">Brian Blosser</a></h3>
+                <h3>Brian Blosser</h3>
                 <div class="person">
                     <img src="img/Membership/brian_blosser.jpg" alt="Brian Blosser">
-                    <ul>
-                        <li><b>Bio: </b>Brian Blosser was born on one side of Missouri (Kansas City) and raised on the other side (St. Louis), which he still calls home.  He studied Electrical Engineering and Jazz Studies at Wash U and Music Technology at Georgia Tech, before changing course to explore his passion for environmental sustainability and social justice.  Since grad school, he's worked on organic farms, in campus ministry, at a homeless shelter, in food service, at a sliding-scale grocery co-op, and he is now embarking on a new career in software development. He enjoys biking, learning foreign languages, trying to live in the present moment, savoring good food and the company of friends, and asking lots of questions.</li>
-                    </ul>
-                    <br clear="all">
+                    <p><b>Bio: </b>Brian Blosser was born on one side of Missouri (Kansas City) and raised on the other side (St. Louis), which he still calls home.  He studied Electrical Engineering and Jazz Studies at Wash U and Music Technology at Georgia Tech, before changing course to explore his passion for environmental sustainability and social justice.  Since grad school, he's worked on organic farms, in campus ministry, at a homeless shelter, in food service, at a sliding-scale grocery co-op, and he is now embarking on a new career in software development. He enjoys biking, learning foreign languages, trying to live in the present moment, savoring good food and the company of friends, and asking lots of questions.</p>
                 </div>
-                <h3><a href="#">Joshua Hill</a></h3>
+                <h3>Joshua Hill</h3>
                 <div class="person">
                     <img src="img/Membership/joshua_hill.jpg" alt="Joshua Hill">
-                    <ul>
-                        <li><b>Bio: </b>Joshua Hill is an electrical design engineer for StraightUp Solar. In addition to designing and installing solar PV systems, Joshua enjoys yoga, gardening and earthen building. He envisions many small "eco-Acre" clusters in and around the vibrant and diverse St. Louis area. Joshua and his wife Elizabeth are proud parents to two young daughters, Lorraine and Cecelia.</li>
-                    </ul>
-                    <br clear="all">
+                    <p><b>Bio: </b>Joshua Hill is an electrical design engineer for StraightUp Solar. In addition to designing and installing solar PV systems, Joshua enjoys yoga, gardening and earthen building. He envisions many small "eco-Acre" clusters in and around the vibrant and diverse St. Louis area. Joshua and his wife Elizabeth are proud parents to two young daughters, Lorraine and Cecelia.</p>
                 </div>
-                <h3><a href="#">Maggie Kuehn</a></h3>
+                <h3>Maggie Kuehn</h3>
                 <div class="person">
                     <img src="img/Membership/maggie_kuehn.jpg" alt="Maggie Kuehn">
-                    <ul>
-                        <li><b>Bio: </b>Maggie Kuehn is a retired secretary.  She enjoys photography sewing and gardening.  She is looking forward to living in a community sharing time and resources in an ecologically sustainable way.</li>
-                    </ul>
-                    <br clear="all">
+                    <p><b>Bio: </b>Maggie Kuehn is a retired secretary.  She enjoys photography sewing and gardening.  She is looking forward to living in a community sharing time and resources in an ecologically sustainable way.</p>
                 </div>
-                <h3><a href="#">Roy John Wheelock</a></h3>
+                <h3>Roy John Wheelock</h3>
                 <div class="person">
                     <img src="img/Membership/roy_wheelock.jpg" alt="Roy John Wheelock">
-                    <ul>
-                        <li><b>Bio: </b>Roy John Wheelock is a retired Registered Nurse. He now studies music and it's application to building and maintaining communities. Philosophically he is aligned with the Earth Charter which is an international declaration of fundamental values and principles considered useful by its supporters for building a just, sustainable, and peaceful global society in the 21st century. He continues to seek out like minded individuals to commune with and who wish to seek nonviolent ways of forwarding these goals. </li>
-                    </ul>
-                    <br clear="all">
+                    <p><b>Bio: </b>Roy John Wheelock is a retired Registered Nurse. He now studies music and it's application to building and maintaining communities. Philosophically he is aligned with the Earth Charter which is an international declaration of fundamental values and principles considered useful by its supporters for building a just, sustainable, and peaceful global society in the 21st century. He continues to seek out like minded individuals to commune with and who wish to seek nonviolent ways of forwarding these goals. </p>
                 </div>
             </div>
         </div>
-        
+
         <!--Vendor Javascript-->
-        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
-        <script type="text/javascript" src="js/jquery.cycle2.js"></script>
-        <script type="text/javascript" src="js/jquery.ui.core.js"></script>
-        <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
-        <script type="text/javascript" src="js/jquery.ui.accordion.js"></script>
-        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
         <!--Custom Javascript-->
-        <script type="text/javascript" src="js/angular-apps/app.js"></script>
         <script type="text/javascript" src="js/navigation-menu.js"></script>
-        
+
         <script type="text/javascript">
             $(document).ready(function () {
-                $("#infolist").accordion({
-                    autoHeight: false
-                });
+                $("#accordion").accordion();
             });
         </script>
-        
+
     </body>
 </html>
