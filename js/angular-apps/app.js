@@ -31,7 +31,7 @@
                 this.peoplePerIncome[i] = this.distributionPct[i] * .01 * groupSize;
             }
         };
-         this.calcPeoplePerIncome2 = function (groupSize) {
+        this.calcPeoplePerIncome2 = function (groupSize) {
             var peoplePerIncome = [];
             for (var i = 0; i < this.representativeIncomes.length; i++) {
                 peoplePerIncome.push(this.distributionPct[i] * .01 * groupSize);
