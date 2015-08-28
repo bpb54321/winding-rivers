@@ -35,7 +35,8 @@
     //height: 100%;
 }
 h1 {
-    color: Khaki ;
+    /*color: Khaki ;*/
+
     font-size: 48px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
@@ -84,7 +85,7 @@ p {
     top:130px;
 }
 .jumbotron h1 {
-    color: Khaki ;
+    color: Khaki;
     font-size: 48px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
