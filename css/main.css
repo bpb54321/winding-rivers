@@ -1,3 +1,8 @@
+/*General Elements*/
+p {
+    font-size: 1.2em; 
+}
+
 /*Navbar CSS*/
 .nav.navbar-nav {
     background-color: white;
@@ -28,30 +33,14 @@
     font-size: 1.0em;
 }
 .d-menu li {
-    //padding-top: 10 px;
     padding-bottom: 10px;
 }
 .navbar-form {
     margin: 0px;
-    //padding: 15px;
-    //height: 100%;
 }
 
 /*Jumbotron CSS*/
-h1 {
-    font-size: 48px;  
-    font-family: 'Shift', sans-serif;
-    font-weight: bold;
-    text-shadow: 4px 4px 4px black;
-}
-h2 {
-    color: #393c3d; 
-    font-size: 24px;
-}
-p {
-    margin-bottom: 13px; 
-    font-size: 15px; 
-}
+
 .jumbotron {
     padding: 0px;
     height: 500px;
@@ -59,11 +48,10 @@ p {
     background-size: cover;
     margin-top: 0px;
     margin-bottom: 0px;
-    background-position:center center;
 }
 .jumbotron .container {
     position: relative;
-    top:130px;
+    top:130px; /*used for positioning jumbotron text*/
 }
 .jumbotron h1 {
     color: Khaki;
@@ -75,17 +63,12 @@ p {
 .jumbotron p {
     font-size: 20px;
     color: #fff;
-    /*color: #1b6d85;
-    text-shadow: 4px 4px 4px black;*/
     text-shadow: 0px 0px 16px black;
 }
+
+/*Supporting Content CSS*/
 .supporting-content {
-    //background-color: #efefef;
-    border-bottom: 1px solid #dbdbdb;
     padding-bottom: 25px;
-    /*border: 1px solid black;*/
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 
