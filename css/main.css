@@ -1,4 +1,4 @@
-
+/*Navbar CSS*/
 .nav.navbar-nav {
     background-color: white;
 }
@@ -8,14 +8,16 @@
 .d-menu {
     background-color: white;
     list-style: none;
+    width: 300px;
 }
 .navbar-header {
     background-color: white;
 }
 
-.d-list-item {
-    height: 50px; //fix height so that dropdown menu can overflow it
-    //height: 100%;
+#d-list-item {
+    height: 50px; /*fix height so that dropdown menu can overflow it*/
+    width: 137px; /*same with width*/
+    overflow: visible;
 }
 
 .nav a {
@@ -34,9 +36,9 @@
     //padding: 15px;
     //height: 100%;
 }
-h1 {
-    /*color: Khaki ;*/
 
+/*Jumbotron CSS*/
+h1 {
     font-size: 48px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
@@ -45,40 +47,19 @@ h1 {
 h2 {
     color: #393c3d; 
     font-size: 24px;
-    /*border: 2px solid black;*/
 }
 p {
     margin-bottom: 13px; 
-    font-size: 15px;
-    /*border: 2px solid black;*/  
+    font-size: 15px; 
 }
 .jumbotron {
     padding: 0px;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
-    /*border: 2px solid black;*/
     margin-top: 0px;
     margin-bottom: 0px;
     background-position:center center;
-}
-.jumbotron .icon-menu {
-    font-size: 2em;
-    text-transform: uppercase;
-    height: 40px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.jumbotron .icon-menu a {
-    text-decoration: none;
-}
-.jumbotron .icon-menu a:link, .jumbotron .icon-menu a:visited { 
-    color: #fff;
-}
-.jumbotron .icon-menu a:hover, .jumbotron .icon-menu a:active { 
-    color: khaki;
 }
 .jumbotron .container {
     position: relative;
@@ -94,8 +75,8 @@ p {
 .jumbotron p {
     font-size: 20px;
     color: #fff;
-    //color: #1b6d85;
-    //text-shadow: 4px 4px 4px black;
+    /*color: #1b6d85;
+    text-shadow: 4px 4px 4px black;*/
     text-shadow: 0px 0px 16px black;
 }
 .supporting-content {
