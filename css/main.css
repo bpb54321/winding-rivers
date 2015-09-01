@@ -14,6 +14,7 @@ p {
     background-color: white;
     list-style: none;
     width: 300px;
+    display: none; /*On initial load, the drop-down menus are hidden*/
 }
 .navbar-header {
     background-color: white;
