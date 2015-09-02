@@ -5,7 +5,7 @@
     app.controller('DisplayBoxController', function () {
         this.annualIncome = 30000;
         this.costOfProperty = 2000000;
-        this.numOfUnits = 12;
+        this.numOfUnits = 12; //in addition to the user
         this.costSharingModel = "Split Evenly";
         this.resultsObject = {
             costSharingModels: ["Split Evenly","Sliding Scale"],
@@ -48,11 +48,11 @@
             this.groupMonthlyMortgagePayment = (this.costOfProperty * rate) / (1 - Math.pow(1 + rate, -months));
             this.groupAnnualMortgagePayment = this.groupMonthlyMortgagePayment * 12;
             
-
-            this.splitEvenMonthlyPmt = this.groupMonthlyMortgagePayment / this.numOfUnits;
+            //Caculate split even monthly payment
+            this.splitEvenMonthlyPmt = this.groupMonthlyMortgagePayment / (this.numOfUnits + 1);
             
-            this.resultsObject.householdMonthlyPayment[0] = this.groupMonthlyMortgagePayment / this.numOfUnits;
-            this.resultsObject.pctMonthlyIncome[0] =100 * this.resultsObject.householdMonthlyPayment[0] / (this.annualIncome/12);
+            this.resultsObject.householdMonthlyPayment[0] = this.splitEvenMonthlyPmt;
+            this.resultsObject.pctMonthlyIncome[0] =100 * this.splitEvenMonthlyPmt / (this.annualIncome/12);
 
             //Calculate sliding scale monthly payment
             this.totalGroupAnnualIncome = 0; //reset total group income
@@ -61,6 +61,8 @@
                 this.totalGroupAnnualIncome += this.peoplePerIncome[j] *
                         this.representativeIncomes[j];
             }
+            this.totalGroupAnnualIncome += this.annualIncome; //Add the user's income into the total income
+            
             this.pctIncomeTowardsMortgage = (this.groupAnnualMortgagePayment / this.totalGroupAnnualIncome) * 100;
             this.slideScaleMonthlyPmt = (this.annualIncome * this.pctIncomeTowardsMortgage * .01) / 12;
             

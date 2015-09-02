@@ -74,29 +74,21 @@
                         <div class="col-md-6">
 
                             <p>Our community  plans to use a <strong> sliding scale financial model </strong>
-                                to share the costs of our property's mortgage.  In our model, 
-                                a household's fraction of the group mortgage is proportional 
-                                to its fraction of the group's combined income.  
+                                to share the costs of our property's mortgage.  One simple sliding-scale model which can serve as an example is a model where a household's fraction of the group mortgage is proportional 
+                                to the household's fraction of the group's combined income.  
                             </p>
                             <p>
                                 To calculate each household's monthly mortgage payment, first we total the
                                 incomes of all the households in the group to get the Total Group Annual Income.  
                                 Next, we take the Total Group Annual Mortgage Payment and divide it by the 
-                                Total Group Annual Income.  This gives us the <strong> flat percentage of income </strong> that 
-                                each household will have to contribute towards the Total Group Mortgage Payment.
-                                Thus, people with lower incomes contribute less becasue they earn less money, and 
-                                people with higher incomes contribute more because they earn more money. 
+                                Total Group Annual Income.  This gives us the <strong> flat percentage of income  </strong> that each household will have to contribute towards the Total Group Mortgage Payment.  Because this model uses a flat percentage of income to determine a household's mortgage payment , people with lower incomes contribute less becasue they earn less money, and people with higher incomes contribute more because they earn more money. 
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <p>To make this concept more concrete, check out the below <a href="#table-bookmark">table</a>, which shows the
-                                distribution of annual income in the City of St. Louis for 2013.  We imagine
-                                our community's incomes will likely follow a similar distribution. 
+                            <p>To make this concept more concrete, check out the below <a href="#table-bookmark">table</a>, which shows the  distribution of annual income in the City of St. Louis for 2013.  We imagine our community's incomes will likely follow a similar distribution. 
                             </p>
                             <p>
-                                Also check out the <a href="#interact-calc"> interactive monthly payment calculator</a> below to see how a household's
-                                monthly payments change based on several factors, and also to see the sliding-scale model
-                                compared to a simple even-split model.  
+                                Then check out the <a href="#interact-calc"> interactive monthly payment calculator</a> below to see how a household's monthly payment in a flat-income percentage model would change based on several factors.  This calculator assumes that the other households in the community have incomes comparable to the St. Louis City Income Distribution shown below.  
                             </p>
                         </div>
                     </div>
@@ -129,6 +121,10 @@
                 <h3>Interactive Monthly Payment Calculator</h3>
                 <h5>Use this interactive tool to estimate what your household's
                     monthly mortgage payment will be once the community is built. </h5>
+                <blockquote>
+                    <h6>Disclaimer: This calculator only gives an idea of household mortgage costs.  It does not take into account property taxes, insurance, utilities, or maintenance, and it does not constitute a guarantee of any kind.  This calulator also does not include any floor or ceilings to household monthly mortgage payments.                       
+                    </h6>
+                </blockquote>
             </div>
             <!--Form-->
             <div class="list-group-item">
@@ -149,7 +145,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="numberOfUnits">Number Of Units: {{display.numOfUnits}}</label>
+                        <label for="numberOfUnits">Number Of Units (In Addition to Your Unit): {{display.numOfUnits}}</label>
                         <input type="range" class="form-control" ng-model="display.numOfUnits" id="numberOfUnits" min="12" max="20" step="1">
                     </div>
                     <div class="form-group">
